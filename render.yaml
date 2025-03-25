@@ -3,8 +3,7 @@ services:
     type: web
     runtime: docker
     plan: free
-    buildCommand: "./mvnw clean package"
-    startCommand: "java -jar target/*.jar"
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: PORT
         value: 8080
