@@ -1,0 +1,10 @@
+services:
+  - name: youtube-video-summarizer-backend
+    type: web
+    runtime: docker
+    plan: free
+    buildCommand: "./mvnw clean package"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: PORT
+        value: 8080
